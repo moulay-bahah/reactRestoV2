@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  background-color: rgb(4 5 4);
+  background-image: url("./assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.contenair {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  margin: auto;
+  column-gap: 30px;
+  row-gap: 55px;
+  height: 80%;
+}
+.contenair-food {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  margin: auto;
+  column-gap: 80px;
+  row-gap: 80px;
+  height: 80%;
+}
+.contenair-form {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  height: 80%;
+}

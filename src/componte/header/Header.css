@@ -1,0 +1,23 @@
+.titel {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 40px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.titel img {
+  width: 70px;
+}
+.titel h1 {
+  font-size: 40px;
+}
+.titel button {
+  color: #fff;
+  background-color: #7e4905;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}

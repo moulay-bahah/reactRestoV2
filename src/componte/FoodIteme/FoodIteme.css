@@ -1,0 +1,33 @@
+.food-iteme {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(163 97 10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.food-iteme p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.food-iteme div {
+  width: 50%;
+}
+.food-iteme div img {
+  width: 100%;
+}
+.food-iteme button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: #f69519;
+  transition: background-color 0.3s ease; 
+}
+.food-iteme button:hover {
+  background-color: rgb(26, 10, 10); 
+  transform: scale(1.07);
+}
