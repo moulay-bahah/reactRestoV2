@@ -10,11 +10,11 @@ export default function Food() {
 
   const [data, setData] = useState([]);
   const {id} = useParams()
-  const intId = +id.substring(1)
+  // const intId = +id.substring(1)
   // console.log(intId)
   useEffect(() => {
-        axios.get(`http://localhost:3001/CategorieData/`+intId).then(res =>{
-        setData(res.data.childer);
+        axios.get(`http://localhost:3001/food/?caterogy_food_id=${id}`).then(res =>{
+        setData(res.data);
       })
   }, []);
  

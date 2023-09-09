@@ -6,7 +6,7 @@ export default function FoodCtegori({ name, img, id }) {
   const navigate = useNavigate();
 
   const NavigerversFood = (id) => {
-    navigate(`/Food/:${id}`);
+    navigate(`/Food/${id}`);
   };
 
   return (

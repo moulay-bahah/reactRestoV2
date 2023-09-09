@@ -12,7 +12,7 @@ export default function AppRoutre(id) {
       <Route path="/Categorie" element={<Categorie />} />
       <Route path="/Food/:id" element={<Food />} />
       <Route path="/Form" element={<PageForm />} />
-      <Route path="/Formfood" element={<Formfood />} />
+      <Route path="/Formfood/:id" element={<Formfood />} />
     </Routes>
     );
 } 
