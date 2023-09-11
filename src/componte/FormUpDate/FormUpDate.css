@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  justify-content: center;
+}
+.form form {
+  width: 400px;
+  padding: 20px;
+  padding-bottom: 0;
+  border-radius: 5px;
+  background-color: #7e4905;
+}
+.form form > .selec-cont > select,
+.form form button,
+.form form > input {
+  padding: 5px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px;
+}
+.form form > input {
+  width: 100%;
+}
+.form form > .selec-cont > select {
+  width: 48%;
+}
+.form form .selec-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.form form button {
+  width: 100%;
+  color: wheat;
+  background-color: #db963e;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.form form button:hover {
+  color: white;
+  transform: scale(1.07);
+}

@@ -4,6 +4,7 @@ import FoodIteme from "../FoodIteme/FoodIteme"
 import { useParams } from "react-router-dom"
 import {useEffect,useState} from "react"
 import axios from 'axios';
+import {axiosConf} from "../../axios-config"
 
 
 export default function Food() {
@@ -13,11 +14,11 @@ export default function Food() {
   // const intId = +id.substring(1)
   // console.log(intId)
   useEffect(() => {
-        axios.get(`http://localhost:3001/food/?caterogy_food_id=${id}`).then(res =>{
+        axios.get(`http://localhost:30001/food/?caterogy_food_id=${id}`).then(res =>{
         setData(res.data);
       })
   }, []);
- 
+  console.log(data)
   return (
     <div className="main">
       <Header titel="Food" Show_Data="Add +"  />

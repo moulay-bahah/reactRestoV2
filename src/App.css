@@ -38,12 +38,27 @@ body {
   position: relative;
   z-index: 2;
   padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  margin: auto;
-  column-gap: 30px;
-  row-gap: 55px;
-  height: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenair button {
+  font-size: 50px;
+  padding: 20px 30px;
+  font-weight: bold;
+  color: white;
+  background-color: #7e4905;
+  border-radius: 10px;
+  border: black 2px solid;
+  transition: all 0.3s;
+  position: relative;
+  top: 70px;
+}
+.contenair button:hover {
+  color: black;
+  background-color: antiquewhite;
+  transform: scale(1.1);
 }
 .contenair-food {
   position: relative;

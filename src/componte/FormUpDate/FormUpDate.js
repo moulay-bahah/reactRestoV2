@@ -1,51 +1,74 @@
-import "./Form.css";
+import "./FormUpDate.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {axiosConf} from "../../axios-config"
 
-export default function Form() {
+export default function FormUpDate() {
   const { id } = useParams();
+  // let v=true
+//   useEffect(() => {
+//     axiosConf.get(`/food/?id=${id}`).then(res =>{
+//     setData(res.data);
+//   })
+// }, []);
 
 
+// const [prevInfo,setPrevInfo] =useState({})
+// let list=prevInfo
+  const [newInfo, setNewInfo] = useState({});
 
+  useEffect(()=>{
+    axios.get(`http://localhost:30001/info/${id}`)
+    
+      .then(res => {
+        setNewInfo((pr) => ({
+        ...pr,
+        ...res.data,
+        Montant : res.data.nomber * res.data.Prix
+        })
+        )
+      });
+      
+  },[])
 
-  const [newInfo, setNewInfo] = useState({
-    emploie: "",
-    Place: "Place 1",
-    Table: "Table 1",
-    paiement: "Bankily",
-    Validation: "Valider",
-    date: "",
-    nomber: null,
-  });
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setNewInfo((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-
+      setNewInfo((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+      setNewInfo((prevData) => ({
+        ...prevData,
+        Montant : prevData.nomber * prevData.Prix,
+      }));
   }
-  useEffect(() => {
-    axios.get(`http://localhost:30001/food/${id}`).then(res =>{
-    setNewInfo((prevData) => ({
-      ...prevData,
-      Montant: newInfo.nomber * res.data.prix,
-      demandes : res.data.name,
-      Prix:res.data.prix,
-    }));
-  })
-}, [newInfo.nomber]);
 
- 
+
+
+
+  console.log(newInfo)
+
+
+//   useEffect(() => {
+//     axios.get(`http://localhost:30001/food/${id}`).then(res =>{
+//     setNewInfo((prevData) => ({
+//       ...prevData,
+//       Montant: newInfo.nomber * res.data.prix,
+//       demandes : res.data.name,
+//       Prix:res.data.prix,
+//     }));
+//   })
+// }, [newInfo.nomber]);
+  
+
   const Navigate = useNavigate()
   function handleSubmit(event) {
     event.preventDefault();
-    axios.post(`http://localhost:30001/info`, newInfo)
+    
+    axios.put(`http://localhost:30001/info/${id}`, newInfo)
     Navigate("/Info")
-      
   }
 
   return (
@@ -65,7 +88,7 @@ export default function Form() {
           onChange={handleChange}
           value={newInfo.emploie}
         />
-         <input
+        <input
           type="date"
           placeholder="date"
           name="date"
@@ -102,7 +125,7 @@ export default function Form() {
           </select>
         </div>
 
-        <button>Enregistre</button>
+        <button>Update</button>
       </form>
     </div>
   );

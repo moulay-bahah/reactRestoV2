@@ -69,6 +69,172 @@
       "img": "/assets/images/pizza-icon.png",
       "caterogy_food_id": "2",
       "id": 10
+    },
+    {
+      "name": "Moulay hassen",
+      "prix": "4",
+      "img": null,
+      "caterogy_food_id": "2",
+      "id": 11
+    },
+    {
+      "name": "Moulay hassen",
+      "prix": "100",
+      "img": null,
+      "caterogy_food_id": "2",
+      "id": 12
+    },
+    {
+      "name": "sidi l7out",
+      "prix": "100",
+      "img": null,
+      "caterogy_food_id": "3",
+      "id": 13
+    },
+    {
+      "name": "pizza 1ewsew",
+      "prix": "111",
+      "img": "",
+      "caterogy_food_id": "3",
+      "id": 14
+    },
+    {
+      "name": "telephonak",
+      "prix": "6",
+      "img": "",
+      "caterogy_food_id": "3",
+      "id": 15
+    },
+    {
+      "name": "pizza ",
+      "prix": "111",
+      "img": "",
+      "caterogy_food_id": "3",
+      "Image": "C:\\fakepath\\IMG-20201216-WA0033-1024x768.jpg",
+      "id": 16
+    },
+    {
+      "name": "Moulay hassen",
+      "prix": "4",
+      "img": "C:\\fakepath\\IMG-20210212-WA0005.jpg",
+      "caterogy_food_id": "3",
+      "id": 17
+    },
+    {
+      "name": "pizza per",
+      "prix": "200",
+      "img": "",
+      "caterogy_food_id": "1",
+      "id": 18
+    },
+    {
+      "name": "hhhhhhhhhhhhhh",
+      "prix": "020",
+      "img": "",
+      "caterogy_food_id": "1",
+      "id": 19
+    },
+    {
+      "name": "pizza 1ewsew",
+      "prix": "100",
+      "img": "",
+      "caterogy_food_id": "3",
+      "id": 20
+    },
+    {
+      "name": "gg",
+      "prix": "100",
+      "img": "",
+      "caterogy_food_id": "1",
+      "id": 21
+    },
+    {
+      "name": "pizza ",
+      "prix": "8",
+      "img": "",
+      "caterogy_food_id": "8",
+      "id": 22
+    },
+    {
+      "name": "Moulay hassen",
+      "prix": "11",
+      "img": "",
+      "caterogy_food_id": "4",
+      "id": 23
+    },
+    {
+      "name": "Moulay hassen",
+      "prix": "12",
+      "img": "",
+      "caterogy_food_id": "3",
+      "id": 24
+    }
+  ],
+  "info": [
+    {
+      "emploie": "mohamed",
+      "Place": "Place 3",
+      "Table": "Table 1",
+      "paiement": "Cash",
+      "Validation": "Valider",
+      "date": "2023-09-06",
+      "nomber": "2",
+      "Montant": 200,
+      "demandes": "Verveine",
+      "Prix": "100",
+      "id": 1
+    },
+    {
+      "emploie": "mohamed",
+      "Place": "Place 1",
+      "Table": "Table 1",
+      "paiement": "Bankily",
+      "Validation": "Valider",
+      "date": "0003-03-08",
+      "nomber": "2",
+      "Montant": 32,
+      "demandes": "pizza ",
+      "Prix": "8",
+      "id": 2
+    },
+    {
+      "emploie": "sidi",
+      "Place": "Place 1",
+      "Table": "Table 1",
+      "paiement": "Bankily",
+      "Validation": "Valider",
+      "date": "2023-08-31",
+      "nomber": "5",
+      "Montant": 30,
+      "demandes": "telephonak",
+      "Prix": "6",
+      "id": 3
+    },
+    {
+      "emploie": "Ely ",
+      "Place": "Place 1",
+      "Table": "Table 1",
+      "paiement": "Bankily",
+      "Validation": "Valider",
+      "date": "2023-09-08",
+      "nomber": "1",
+      "Montant": 111,
+      "demandes": "pizza 1ewsew",
+      "Prix": "111",
+      "id": 4
+    },
+    {
+      "emploie": "sidi",
+      "Place": "Place 5",
+      "Table": "Table 20",
+      "paiement": "Sedade",
+      "Validation": "Non Va",
+      "date": "2023-09-07",
+      "nomber": "2",
+      "Montant": 24,
+      "demandes": "Moulay hassen",
+      "Prix": "12",
+      "id": 5
     }
   ]
 }

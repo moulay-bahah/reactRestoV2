@@ -2,12 +2,14 @@
 import './FoodIteme.css'
 import { useNavigate } from 'react-router-dom';
 
-export default function FoodIteme({ name, img, prix }) {
+export default function FoodIteme({ name, img, prix,id }) {
   const navigate = useNavigate()
 
+  // `/Form/${id}`
   const NavigerversForm=()=>{
-    navigate('/Form')
+    navigate(`/Form/${id}`)
   }
+  console.log(id)
 
   return (
     <div className="food-iteme">
@@ -15,7 +17,7 @@ export default function FoodIteme({ name, img, prix }) {
         {name} : cost {prix} UM
       </p>
       <div>
-      <img src={img} alt="food_icon" />
+      <img src={"http://localhost:3000/" + img} alt="food_icon" />
       </div>
       <button onClick={NavigerversForm}>
         Demander

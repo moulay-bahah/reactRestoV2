@@ -16,6 +16,11 @@ export default function Header({ titel, Show_Data}) {
   function Addrepas() {
     if(Show_Data === "Add +") {
       navigate(`/Formfood/${id}`)
+    }else if (Show_Data === "Show Data") {
+      navigate(`/Info`)
+    }
+    else if(Show_Data === "Demande"){
+      navigate(`/Categorie`)
     }
   }
 

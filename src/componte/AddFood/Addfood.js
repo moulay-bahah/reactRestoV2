@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import "./Addfood.css";
+import {  useState } from "react";
+import "./Addfood.css"; 
+import { useNavigate, useParams } from "react-router-dom";
+import { axiosConf } from '../../axios-config';
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
 // retrive id  usung useParams, id = food categorie id
 //  retrive data to save from 
@@ -13,14 +14,16 @@ import { useParams } from "react-router-dom";
 export default function Addfood() {
 
   const{id} = useParams()
+  //categorie_food_id
   const [newdata, setNewData] = useState({
     name: "",
     prix: 0,
-    img: "/assets/images/pizza-icon.png",
+    img: "", 
     caterogy_food_id: id,
+    //categorie_food_id:id
   });
-
-  const [selectedImage, setSelectedImage] = useState(null);
+ 
+  const Navigate = useNavigate()
 
 
   function handleChange(event) {
@@ -35,9 +38,16 @@ export default function Addfood() {
 
 
 
-  function handleSubmit(event) {
+   function handleSubmit(event) {
     event.preventDefault();
-    axios.post(`http://localhost:3001/food`, newdata)
+     axios.post(`http://localhost:30001/food`, newdata)
+    .then(
+      d => console.log(d)
+      )
+      .catch(
+        e => console.log(e)
+        )
+    Navigate(`/Food/${id}`)
       
   }
 
@@ -58,9 +68,12 @@ export default function Addfood() {
           onChange={handleChange}
           value={newdata.prix}
         />
-
         <input
           type="file"
+          accept="image/*"
+          name="img"
+          onChange={handleChange}
+          value={newdata.img}
         />
 
         <button type="submit">Enregistrer</button>
